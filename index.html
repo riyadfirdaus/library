@@ -4,10 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
-    <script src="main.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
+    <script src="main.js" defer></script>
   </head>
   <body>
-    Test
+    <!-- MODAL -->
+    <div class="overlay hidden"></div>
+    <div id="modal" class="modal hidden">
+      <form action="#" id="book-form">
+        <label for="name">Book's name</label>
+        <input type="text" name="name" id="name" />
+        <label for="author">Author</label>
+        <input type="text" name="author" id="author" />
+        <label for="pages">Total Pages</label>
+        <input type="number" name="pages" id="pages" />
+        <label for="read">Is it have been read?</label>
+        <div class="radio">
+          <input type="radio" name="read" value="true" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="read" value="false" />
+          <label for="no">No</label>
+        </div>
+        <div class="buttonGroup">
+          <button class="close-btn" type="reset">Close</button>
+          <button class="submit-btn" type="submit">Add</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Item -->
+    <h1>My Library</h1>
+    <div class="book-display">
+      <div class="header">
+        <h3>Book List</h3>
+        <button id="add-btn">Add book</button>
+      </div>
+      <div class="list"></div>
+    </div>
+
+    <div class="library"></div>
   </body>
 </html>
