@@ -29,12 +29,25 @@ body {
 .book-display {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 70%;
 }
 
-.book-display .list {
-  display: grid;
-  grid-template-columns: 1fr 4fr 2fr;
+.book-display table {
+  table-layout: fixed;
+
+  width: 100%;
+}
+
+table td:first-child,
+th:first-child,
+th:last-child,
+table td:last-child {
+  width: 1%;
+  white-space: nowrap;
+}
+table td {
+  word-wrap: break-word;
+  text-align: center;
 }
 .buttonGroup {
   display: flex;
